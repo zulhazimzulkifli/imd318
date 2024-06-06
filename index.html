@@ -1,0 +1,136 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="image/Elegant_Beauty_Blogger_Name_Logo-removebg-preview.png" />
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo"><img src="image/Elegant_Beauty_Blogger_Name_Logo-removebg-preview.png" alt="Logo"></a>
+            <div class="Nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li>
+                        <a href="index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="aboutme.html">ABOUT ME</a>
+                        <ul class="dropdown">
+                            <li><a href="aboutme.html#overview">Overview</a></li>
+                            <li><a href="aboutme.html#hobbies">My Hobbies</a></li>
+                            <li><a href="aboutme.html#favourite-food">Favourite Food</a></li>
+                            <li><a href="aboutme.html#gallery">Gallery</a></li>
+                            <li><a href="aboutme.html#music-playlist">My Music Playlist</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="education.html">EDUCATION</a>
+                        <ul class="dropdown">
+                            <li><a href="education.html#overview">Overview</a></li>
+                            <li><a href="education.html#primary-school">Primary School</a></li>
+                            <li><a href="education.html#secondary-school">Secondary School</a></li>
+                            <li><a href="education.html#diploma">Diploma</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="family.html">FAMILY</a>
+                    </li>
+                    <li>
+                        <a href="friends.html">FRIENDS</a>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="resume.html">RESUME</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </header>
+    <div class="marque">
+        <marquee scrollamount="10"><h3>WELCOME TO ZUL'S PERSONAL WEBSITE</h3></marquee>
+    </div>
+    <div class="hero">
+        <div class="container">
+            <div class="main">
+                <h1>This is Zulhazim's Personal Website</h1>
+                <p>Hi, Assalamualaikum, Zulhazim Zulkifli here. <br> I'm a student at Universiti Teknologi Mara (UiTM) Kedah.<br> 
+                    I'm currently studying in Diploma in Information Management.
+                    <br> This is my personal website for course Introduction to Web Content Management (IMD318) <br><br>*WANT TO KNOW ABOUT ME? CLICK BELOW"</p>
+                <a href="aboutme.html" class="button">click here</a>
+            </div>
+            <div class="img-container">
+                <div class="slider">
+                    <div class="list">
+                        <div class="item">
+                            <img src="image/zulwallpaper.png">
+                        </div>
+                        <div class="item">
+                            <img src="image/zul1.jpg">
+                        </div>
+                        <div class="item">
+                            <img src="image/zul2.jpg">
+                        </div>
+                        <div class="item">
+                            <img src="image/zul3.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<footer>
+        <div class="footer-links">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="aboutme.html">ABOUT ME</a></li>
+                <li><a href="education.html">EDUCATION</a></li>
+                <li><a href="family.html">FAMILY</a></li>
+                <li><a href="friends.html">FRIENDS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+		<h4>CONTACT ME:</h4>
+		<div class="Icons">
+			<a class="fa fa-whatsapp" href="https://wa.link/ubr2kk"></a>
+			<a class="fa fa-facebook" href="https://www.facebook.com/long.key.180"></a>
+			<a class="fa fa-instagram" href="https://instagram.com/zulhzm_"></a>
+			<a class="fa fa-telegram" href="https://t.me/+60192329910"></a>
+		</div>
+		<p>&copy; 2024 Zulhazim Zulkifli. All Rights Reserved.</p>
+	</footer>
+
+
+    <script>
+        function showMenu() {
+            document.getElementById('navLinks').style.right = "0";
+        }
+
+        function hideMenu() {
+            document.getElementById('navLinks').style.right = "-200px";
+        }
+
+        var currentIndex = 0;
+
+        function slide() {
+            const slides = document.querySelectorAll('.slider .list .item');
+            const totalSlides = slides.length;
+
+            for (let i = 0; i < totalSlides; i++) {
+                slides[i].style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            currentIndex = (currentIndex + 1) % totalSlides;
+        }
+
+        setInterval(slide, 2000); 
+    </script>
+</body>
+</html>

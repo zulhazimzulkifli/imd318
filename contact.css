@@ -1,0 +1,66 @@
+.hero{
+    height: 200px;
+    background-color: #b30000;
+    text-align: center;
+}
+
+.hero .title-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.main-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+.address {
+    flex: 1;
+    min-width: 200px; 
+    margin-right: 20px; 
+}
+
+.address p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.social-media {
+    flex: 1;
+    min-width: 200px; 
+    margin-left: 20px; 
+}
+
+.social-media h2 {
+    margin-top: 0; 
+}
+
+.social-media p {
+    margin: 10px 0;
+}
+
+.social-media a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #b30000;
+}
+
+.social-media i {
+    margin-right: 8px;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resume.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="image/Elegant_Beauty_Blogger_Name_Logo-removebg-preview.png" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo"><img src="image/Elegant_Beauty_Blogger_Name_Logo-removebg-preview.png" alt="Logo"></a>
+            <div class="Nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li>
+                        <a href="index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="aboutme.html">ABOUT ME</a>
+                        <ul class="dropdown">
+                            <li><a href="aboutme.html#overview">Overview</a></li>
+                            <li><a href="aboutme.html#hobbies">My Hobbies</a></li>
+                            <li><a href="aboutme.html#favourite-food">Favourite Food</a></li>
+                            <li><a href="aboutme.html#gallery">Gallery</a></li>
+                            <li><a href="aboutme.html#music-playlist">My Music Playlist</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="education.html">EDUCATION</a>
+                        <ul class="dropdown">
+                            <li><a href="education.html#overview">Overview</a></li>
+                            <li><a href="education.html#primary-school">Primary School</a></li>
+                            <li><a href="education.html#secondary-school">Secondary School</a></li>
+                            <li><a href="education.html#diploma">Diploma</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="family.html">FAMILY</a></li>
+                    <li>
+                        <a href="friends.html">FRIENDS</a>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="resume.html">RESUME</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </header>
+    <div class="hero">
+        <div class="title-container">
+            <h1>Resume</h1>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="resume-wrapper">
+            <img src="image/resume.png" alt="My Resume" class="resume-image" id="resume-image">
+        </div>
+    </div>
+    <audio id="background-music" autoplay loop>
+        <source src="audio/resumebg.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <footer>    
+        <div class="footer-links">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="aboutme.html">ABOUT ME</a></li>
+                <li><a href="education.html">EDUCATION</a></li>
+                <li><a href="family.html">FAMILY</a></li>
+                <li><a href="friends.html">FRIENDS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+		<h4>CONTACT ME:</h4>
+		<div class="Icons">
+			<a class="fa fa-whatsapp" href="https://wa.link/ubr2kk"></a>
+			<a class="fa fa-facebook" href="https://www.facebook.com/long.key.180"></a>
+			<a class="fa fa-instagram" href="https://instagram.com/zulhzm_"></a>
+			<a class="fa fa-telegram" href="https://t.me/+60192329910"></a>
+		</div>
+		<p>&copy; 2024 Zulhazim Zulkifli. All Rights Reserved.</p>
+	</footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const resumeImage = document.getElementById('resume-image');
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
+    document.body.appendChild(overlay);
+
+    resumeImage.addEventListener('click', function() {
+        if (resumeImage.classList.contains('enlarged')) {
+            resumeImage.classList.remove('enlarged');
+            overlay.classList.remove('active');
+        } else {
+            resumeImage.classList.add('enlarged');
+            overlay.classList.add('active');
+        }
+    });
+
+    overlay.addEventListener('click', function() {
+        resumeImage.classList.remove('enlarged');
+        overlay.classList.remove('active');
+    });
+});
+    </script>
+
+</body>
+</html>
